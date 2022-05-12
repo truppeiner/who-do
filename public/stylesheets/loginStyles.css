@@ -2,8 +2,10 @@
 
 /* end header style */
 
+/* card styling */
 .card {
     border-radius: 15px;
+    margin-top: 150px;
 }
 
 h3 {
@@ -11,3 +13,15 @@ h3 {
     margin-top: 10px;
 }
 
+/* about styling */
+h4 {
+    text-align:center;
+}
+
+.github {
+    text-align: center;
+}
+
+.github, a {
+    text-decoration: none;
+}
