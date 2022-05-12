@@ -1,4 +1,13 @@
 /* header styling */
 
-
 /* end header style */
+
+.card {
+    border-radius: 15px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
