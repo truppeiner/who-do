@@ -28,7 +28,7 @@ Comment.init(
     event_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'post',
+        model: 'event',
         key: 'id'
       }
     }
