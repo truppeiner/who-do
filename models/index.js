@@ -1,10 +1,10 @@
 // import all models
 const Event = require('./Event');
 const User = require('./User');
-/*
-const Vote = require('./Vote');
 const Comment = require('./Comment');
-*/
+
+// const Vote = require('./Vote');
+
 
 // create associations
 User.hasMany(Event, {
@@ -49,14 +49,15 @@ User.hasMany(Vote, {
 Post.hasMany(Vote, {
   foreignKey: 'post_id'
 });
+*/
 
 Comment.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
 });
 
-Comment.belongsTo(Post, {
-  foreignKey: 'post_id',
+Comment.belongsTo(Event, {
+  foreignKey: 'event_id',
   onDelete: 'SET NULL'
 });
 
@@ -65,8 +66,8 @@ User.hasMany(Comment, {
   onDelete: 'SET NULL'
 });
 
-Post.hasMany(Comment, {
-  foreignKey: 'post_id'
+Event.hasMany(Comment, {
+  foreignKey: 'event_id'
 });
-*/
+
 module.exports = { User, Event};
