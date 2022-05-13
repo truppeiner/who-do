@@ -15,22 +15,47 @@ header nav div a span {
 }
 /* end header style */
 
+/* body styling */
+body {
+    font-family: 'Lora', serif;
+    background-image: linear-gradient(to bottom right, var(--background-color), #FFFDD0 );
+    padding-bottom: 60px;
+}
 /* card styling */
 .card {
-    border-radius: 15px;
-    margin-top: 150px;
+    border-radius: 1rem;
+    border-color: var(--primary-color-light);
+    margin-top: 80px;
     background-color: var(--primary-color-light);
 }
 
 h3 {
     text-align: center;
     margin-top: 10px;
-    color: var(--primary-color)
+    color: var(--primary-color);
+    /* font-style: italic; */
 }
-
+ h3 span {
+     border-bottom: 2px solid var(--secondary-color);
+     padding-bottom: 10px;
+ }
 .btn {
     background-color: var(--secondary-color);
     color: var(--background-color);
+}
+
+.password-entry {
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 20px;
+}
+
+.material-symbols-outlined {
+    color: var(--secondary-color);
+}
+/* sign in styling */
+/* sign up card styling */
+.signup-img {
+    border-radius: 1rem 0 0 1rem;
 }
 /* about styling */
 h4 {
@@ -38,6 +63,10 @@ h4 {
     color: var(--primary-color);
 }
 
+h4 span {
+    border-bottom: 2px solid var(--secondary-color);
+     padding-bottom: 10px;
+}
 .about-card{
     background-color: var(--primary-color-light);
     color: var(--primary-color);
