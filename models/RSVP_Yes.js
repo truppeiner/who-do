@@ -30,7 +30,7 @@ RSVP_Yes.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'RSVP_Yes'
+    modelName: 'rsvp_yes'
   }
 );
 

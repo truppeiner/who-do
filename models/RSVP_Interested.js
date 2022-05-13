@@ -30,7 +30,7 @@ RSVP_Interested.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'RSVP_Interested'
+    modelName: 'rsvp_interested'
   }
 );
 
