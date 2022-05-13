@@ -1,27 +1,53 @@
+:root {
+    --primary-color: #07689f;
+    --primary-color-light: #A2D5F2;
+    --secondary-color: #FF7E67;
+    --background-color: #FAFAFA;
+}
 /* header styling */
+header {
+    background-color: var(--primary-color-light);
+    border-bottom: 2px solid var(--secondary-color);
+}
 
+header nav div a span {
+    color: var(--primary-color);
+}
 /* end header style */
 
 /* card styling */
 .card {
     border-radius: 15px;
     margin-top: 150px;
+    background-color: var(--primary-color-light);
 }
 
 h3 {
     text-align: center;
     margin-top: 10px;
+    color: var(--primary-color)
 }
 
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
 /* about styling */
 h4 {
     text-align:center;
+    color: var(--primary-color);
 }
 
+.about-card{
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+}
 .github {
     text-align: center;
 }
 
-.github, a {
+.github a {
     text-decoration: none;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
 }
