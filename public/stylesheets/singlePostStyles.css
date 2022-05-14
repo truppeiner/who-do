@@ -1,0 +1,80 @@
+:root {
+  --primary-color: #07689F;
+  --primary-color-light: #A2D5F2;
+  --secondary-color: #FF7E67;
+  --background-color: #FAFAFA;
+}
+
+header {
+  background-color: var(--primary-color-light);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+header nav div a span {
+  color: var(--primary-color);
+}
+
+.subhead {
+  background-color: var(--primary-color-light);
+}
+
+
+body {
+  font-family: 'Lora', serif;
+  background-image: linear-gradient(to bottom right, var(--background-color), #FFFDD0 );
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100rem 100rem;
+}
+
+.post {
+  background-color: var(--primary-color-light);
+  border-radius: 1rem;
+}
+
+.title {
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-family: 'Lora', serif;
+  font-size: larger;
+}
+
+.content {
+  font-family: 'Lora', serif;
+  color: var(--primary-color);
+}
+
+.content a {
+  color: var(--primary-color);
+}
+
+.attending {
+  font-family: 'Lora', serif;
+  color: var(--primary-color);
+  font-size: large;
+}
+
+.comment-title {
+  font-family: 'Lora', serif;
+  color: var(--primary-color);
+  font-size: large;
+}
+
+.comment {
+  font-family: 'Lora', serif;
+  background-color: var(--primary-color-light);
+  border-radius: 1rem;
+  color: var(--primary-color);
+}
+
+.comment-user {
+  text-decoration: underline;
+}
+
+.add-comment-btn, .interested-btn, .going-btn {
+  font-family: 'Lora', serif;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  border-color: var(--secondary-color);
+}
