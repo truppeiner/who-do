@@ -24,35 +24,25 @@ body {
   background-image: linear-gradient(to bottom right, var(--background-color), #FFFDD0 );
   height: 100%;
   background-repeat: no-repeat;
-  background-size: 100rem 100rem;
+  min-width: 100%;
 }
 
-.post {
+.event-info, .main {
+  font-family: 'Lora', serif;
+  font-size: large;
+  color: var(--primary-color);
+}
+
+.side-banner img {
+  max-width: 100%;
+}
+
+.description, .comments, .location {
   background-color: var(--primary-color-light);
-  border-radius: 1rem;
-}
-
-.title {
-  text-decoration: underline;
-  text-decoration-color: var(--secondary-color);
-  color: var(--primary-color);
-  font-family: 'Lora', serif;
-  font-size: larger;
-}
-
-.content {
-  font-family: 'Lora', serif;
-  color: var(--primary-color);
 }
 
 .content a {
   color: var(--primary-color);
-}
-
-.attending {
-  font-family: 'Lora', serif;
-  color: var(--primary-color);
-  font-size: large;
 }
 
 .comment-title {
@@ -68,8 +58,13 @@ body {
   color: var(--primary-color);
 }
 
-.comment-user {
+.comment-user, .location-text {
   text-decoration: underline;
+  text-decoration-color: var(--secondary-color);
+}
+
+.attending {
+  text-decoration: none;
 }
 
 .add-comment-btn, .interested-btn, .going-btn {
