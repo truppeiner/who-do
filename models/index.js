@@ -103,4 +103,4 @@ Event.hasMany(Comment, {
   foreignKey: 'event_id'
 });
 
-module.exports = { User, Event, RSVP_Yes, RSVP_Interested};
+module.exports = { User, Event, Comment, RSVP_Yes, RSVP_Interested};
