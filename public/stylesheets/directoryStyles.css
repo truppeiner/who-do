@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #07689f;
+    --primary-color-light: #A2D5F2;
+    --secondary-color: #FF7E67;
+    --background-color: #FAFAFA;
+}
+/* header styling */
+header {
+    background-color: var(--primary-color-light);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+header nav div a span {
+    color: var(--primary-color);
+}
+
+/* end header style */
+
+body {
+    font-family: 'Lora', serif;
+    /* background-image: linear-gradient(to bottom right, var(--background-color), #FFFDD0 ); */
+}
+
+/* event card styling */
+.card{
+    margin: 10px;
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+    border: var(--primary-color-light);
+
+}
+
+.post-display .card-body .card-title span {
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 2px;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+/* vert column styling */
+
+.vert-column-header {
+    text-align: center;
+}
+
+#create-event-button {
+    justify-content: center;
+}
+
+.vert-banner {
+    border-radius: .5rem;
+}
+/* modal styling */
+
+.modal-content {
+    background-color: #FFFDD0;
+}
+
+#modal-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+#modal-title span {
+    border-bottom: 2px solid var(--secondary-color);
+}
+.modal-body {
+    background-color: var(--primary-color-light);
+    margin: 5px;
+    padding: 5px;
+    border-radius: .5rem;
+}
+
+.modal-footer{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-top: 2px solid var(--secondary-color);
+    justify-content: center;
+}
+.modal-img {
+    border-radius: .5rem;
+}
+

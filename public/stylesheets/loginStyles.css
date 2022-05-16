@@ -13,6 +13,7 @@ header {
 header nav div a span {
     color: var(--primary-color);
 }
+
 /* end header style */
 
 /* body styling */
@@ -65,12 +66,13 @@ h4 {
 
 h4 span {
     border-bottom: 2px solid var(--secondary-color);
-     padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 .about-card{
     background-color: var(--primary-color-light);
     color: var(--primary-color);
 }
+
 .github {
     text-align: center;
 }
