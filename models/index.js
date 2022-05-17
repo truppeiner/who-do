@@ -16,11 +16,9 @@ Event.belongsTo(User, {
   onDelete: 'SET NULL'
 });
 
-
 User.belongsToMany(Event, {
   through: RSVP_Yes,
   as: 'going',
-
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
 });
@@ -28,7 +26,6 @@ User.belongsToMany(Event, {
 User.belongsToMany(Event, {
   through: RSVP_Interested,
   as: 'interested',
-
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
 });
@@ -82,7 +79,6 @@ Event.hasMany(RSVP_Yes, {
 Event.hasMany(RSVP_Interested, {
   foreignKey: 'event_id'
 });
-
 
 Comment.belongsTo(User, {
   foreignKey: 'user_id',

@@ -110,32 +110,33 @@ router.post('/', (req, res) => {
     });
 });
 
-// add/remove/update a rsvp_interested
-// router.put('/rsvp_interested', (req, res) => {
-//     if (req.session) {
-//         Event.rsvp_interested({ ...req.body, user_id: req.session.user_id }, { RSVP_Interested, Comment, User })
-//         .then(updatedRsvp_InterestedData => res.json(updatedRsvp_InterestedData))
-//         .catch(err => {
-//             console.log(err);
-//             res.status(500).json(err);
-//         });
-//     }
 
-// });
+// add/remove/update a rsvp_interested
+router.put('/rsvp_interested', (req, res) => {
+     if (req.session) {
+         Event.rsvp_interested({ ...req.body, user_id: req.session.user_id }, { RSVP_Interested, Comment, User })
+       .then(updatedRsvp_InterestedData => res.json(updatedRsvp_InterestedData))
+       .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+         });
+     }
+
+});
+
 
 // add/remove/update a rsvp_yes
-// router.put('/rsvp_yes', (req, res) => {
-//     if (req.session) {
-//         Event.rsvp_yes({ ...req.body, user_id: req.session.user_id }, { RSVP_Yes, Comment, User })
-//         .then(updatedRsvp_YesData => res.json(updatedRsvp_YesData))
-//         .catch(err => {
-//             console.log(err);
-//             res.status(500).json(err);
-//         });
-//     }
-
-// });
-
+router.put('/rsvp_yes', (req, res) => {
+if (req.session) {
+         Event.rsvp_yes({ ...req.body, user_id: req.session.user_id }, { RSVP_Yes, Comment, User })
+         .then(updatedRsvp_YesData => res.json(updatedRsvp_YesData))
+         .catch(err => {
+            console.log(err);
+             res.status(500).json(err);
+        });
+    }
+ });
+ 
 // update an event
 router.put('/:id', (req, res) => {
     Event.update(
