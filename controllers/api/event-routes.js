@@ -121,7 +121,6 @@ router.put('/rsvp_interested', (req, res) => {
             res.status(500).json(err);
          });
      }
-
 });
 
 
