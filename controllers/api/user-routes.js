@@ -37,13 +37,13 @@ router.get('/:id', (req, res) => {
                 model: Event,
                 attributes: ['event_name'],
                 through: RSVP_Interested,
-                as: 'rsvp_interested_events'
+                as: 'interested'
             },
             {
                 model: Event,
                 attributes: ['event_name'],
                 through: RSVP_Yes,
-                as: 'rsvp_yes_events'
+                as: 'going'
             }
         ]
     })
