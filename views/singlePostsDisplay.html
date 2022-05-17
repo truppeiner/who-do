@@ -19,12 +19,12 @@
 
 <!-- header -->
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg">
+  <header class="container-fluid">
+    <nav class="navbar navbar-expand">
       <div class="row container-fluid">
         <div class="col-1"></div>
-        <a href="#" class="navbar-brand h2 col-10 justify-content-center text-center"><span class="h2">Who Do?</span></a>
-        <a class="col-1 justify-content-end text-end p-1" href=""><span class="material-symbols-outlined">
+        <a href="#" class="navbar-brand h2 col-10 text-center"><span class="h2">Who Do?</span></a>
+        <a class="col-1 text-end p-1" href=""><span class="material-symbols-outlined">
           logout
           </span></a>
       </div> 
@@ -32,7 +32,7 @@
     </header>
 
     <!-- event info -->
-    <div class="event-info text-center pt-3">
+    <div class="event-info container-fluid text-center pt-3">
       <div class="">
         <p class="">Tuesday, June 14, 2022</p>
         <p class="">Blues on the Green</p>
@@ -41,29 +41,29 @@
     </div>
 
     <!-- main body -->
-    <div class="main row p-3">
+    <div class="main row container-fluid p-3">
       <!-- side banner -->
-      <div class="side-banner col-3">
+      <div class="side-banner col-lg-3">
         <img class="" src="../public/images/megan-bucknall-CqKmePB63GE-unsplash.jpg">
       </div>
 
       <!-- main event info with comments -->
-      <div class="main-event col-6 rounded">
+      <div class="main-event col-lg-6 rounded">
         <div class="description rounded p-2">
           <p class="">Blues on the Green</p>
           <p clas="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum doloribus voluptatibus maxime, minus harum obcaecati minima asperiores sint veritatis quam nesciunt ipsum accusantium ex neque earum porro nobis vel!</p>
           <div class="more-info row">
-            <p class="title col-2 ">More Info:</p>
-            <p class="content col-10 "><a href="https://www.acl-radio.com/blues-on-the-green/" target="_blank">Blues on the Green</a></p>
+            <p class="title col-6 text-center">More Info:</p>
+            <p class="content col-6"><a href="https://www.acl-radio.com/blues-on-the-green/" target="_blank">Blues on the Green</a></p>
           </div>
         </div>
 
         <div class="comments my-2 rounded p-2">
           <p class="comment-title">Comments:</p>
-            <ul class="comment-list mx-5">
+            <ul class="comment-list row mx-5">
               <li class="comment row">
-                <p class="comment-user col-2" >user124:</p>
-                <p class="comment-content col-8" >I will be there!</p>
+                <p class="comment-user col-1" >user124:</p>
+                <p class="comment-content col-11 text-center" >I will be there!</p>
               </li>
             </ul>
             <form class="comment-form mx-5">
@@ -74,20 +74,20 @@
             <!-- buttons to add comments and say whether interested or going -->
             <div class="buttons">
               <button type="submit" class="add-comment-btn text-center rounded mb-3">Add comment</button>
-              <button type="button" class="interested-btn text-center rounded">I'm Interested</button>
-              <button type="button" class="going-btn text-center rounded">I'm Going</button>
+              <button type="button" class="interested-btn text-center rounded mb-3">I'm Interested</button>
+              <button type="button" class="going-btn text-center rounded mb-3">I'm Going</button>
             </div>
           </form>
           </div>
       </div>
 
       <!-- time date and location -->
-      <div class="location col-3 rounded p-2">
+      <div class="location col-lg-3 rounded p-5">
         <p class="location-text">Tuesday, June 14, 2022</p>
         <p class="location-text">6pm to 10pm</p>
         <p class="location-text">2207 Lou Neff Rd, Austin, TX 78746</p>
         <iframe class="justify-content-center" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27550.02226964026!2d-97.730598!3d30.329548950000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1652575859718!5m2!1sen!2sus" width="75%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="attending mx-5 text-decoration-none">
+        <div class="attending ">
           <p>Interested: #</p>
           <p>Going: #</p>
         </div>
