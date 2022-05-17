@@ -51,8 +51,7 @@ Event.init(
     user_name: {
       type: DataTypes.STRING,
       references: {
-        model: 'user',
-        key: 'id'
+        model: 'user'
       }
     },
     user_id: {
