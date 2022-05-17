@@ -100,7 +100,8 @@ router.post('/', (req, res) => {
         event_start_time: req.body.event_start_time,
         event_end_time: req.body.event_end_time,
         event_url: req.body.event_url,
-        user_id: req.session.user_id
+        user_id: req.session.user_id,
+        username: req.session.username
     })
     .then(dbEventData => res.json(dbEventData))
     .catch(err => {
