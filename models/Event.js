@@ -1,7 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-// create our Event model
-class Event extends Model {}
+// create Event model
+class Event extends Model {
+  
+
+}
 
 // create fields/columns for Event model
 Event.init(
