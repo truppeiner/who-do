@@ -1,0 +1,43 @@
+<div class="event-info container-fluid text-center pt-3">
+      <div class="text-center container fluid">
+        <p class="date">{{}}</p>
+        <p class="title">{{}}</p>
+        <p class="user">Hosted by: {{}}</p>
+      </div>
+    </div>
+
+    <!-- main body -->
+    <div class="main row container-fluid p-3">
+      <!-- side banner -->
+      <div class="side-banner col-lg-3">
+        <img class="" src="../public/images/megan-bucknall-CqKmePB63GE-unsplash.jpg">
+      </div>
+
+      <!-- main event info with comments -->
+      <div class="main-event col-lg-6 rounded">
+        <div class="description rounded p-2">
+          <p class="title">{{}}</p>
+          <p clas="desctiption">{{}}</p>
+          {{#if event link provided}}
+          <div class="more-info row">
+            <p class="title col-6 text-center">More Info:</p>
+            <p class="content col-6"><a href="{{!Event link}}" target="_blank">{{!event name}}</a></p>
+          </div>
+          {{/if}}
+        </div>
+
+        {{comments}}
+
+
+      <!-- time date and location -->
+      <div class="location col-lg-3 rounded p-5">
+        <p class="location-text date">{{}}</p>
+        <p class="location-text time">{{}}</p>
+        <p class="location-text location">{{}}</p>
+        <iframe class="justify-content-center" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27550.02226964026!2d-97.730598!3d30.329548950000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1652575859718!5m2!1sen!2sus" width="75%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="attending ">
+          <p>Interested: {{interested count}}</p>
+          <p>Going: {{going count}}</p>
+        </div>
+      </div>
+    </div>
