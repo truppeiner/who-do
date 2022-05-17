@@ -25,8 +25,8 @@ body {
     border-bottom: 2px solid var(--secondary-color);
 }
 .dropdown-nav {
-    /* border-radius: .5rem;
-    background-color: var(--primary-color-light); */
+    /* border-radius: .5rem; */
+    background-color: var(--primary-color-light);
     border-radius: .5rem;
     border-bottom: 2px solid var(--secondary-color);
 }
@@ -46,7 +46,7 @@ h3,h5 {
 /* event card styling */
 .card{
     margin: 10px;
-    background-color: var(--background-color);
+    background-color: var(--primary-color-light);
     color: var(--primary-color);
     border: 2px solid var(--primary-color-light);
 

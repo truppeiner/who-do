@@ -1,0 +1,181 @@
+<link rel="stylesheet" href="/stylesheets/directoryStyles.css">
+<section class="row">
+    <!-- post displays -->
+        <div class="col-sm-7">
+            <div clas="row m-4">
+                <div class="container-fluid m-3">
+                    <h3><span class="m-2 welcome-header">Welcome To Austin!</span></h3>
+                    <!-- dropdown navbar -->
+                    <nav class="navbar .navbar-expand-md mt-4 m-1 shadow-lg dropdown-nav">
+                        <div class="container-fluid">
+                            <h5>Popular Locations</h5>
+                            <!-- dropdown button -->
+                            <div class="dropdown nav-item">
+                                <button class="btn dropdown-toggle" type="button" id="dropdown-park" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Parks
+                                </button>
+                                <!-- dropdown options -->
+                                <ul class="dropdown-menu" aria-labelledby="dropdown-park">
+                                    <li><a class="dropdown-item" href="https://www.austintexas.gov/department/zilker-metropolitan-park">Zilker</a></li>
+                                    <li><a class="dropdown-item" href="https://austinparks.org/barton-creek-greenbelt/">Barton Creek</a></li>
+                                    <li><a class="dropdown-item" href="https://tpwd.texas.gov/state-parks/mckinney-falls">McKinney Falls</a></li>
+                                </ul>
+                            </div>
+                            <!-- dropdown button -->
+                            <div class="dropdown nav-item">
+                                <button class="btn dropdown-toggle" type="button" id="dropdown-brew" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Breweries
+                                </button>
+                                <!-- dropdown options -->
+                                <ul class="dropdown-menu" aria-labelledby="dropdown-brew">
+                                    <li><a class="dropdown-item" href="https://theabgb.com/">Austin Beer Garden</a></li>
+                                    <li><a class="dropdown-item" href="http://www.fairweathercider.com/">Fairweather Cider Co.</a></li>
+                                    <li><a class="dropdown-item" href="https://austinbeerworks.com/">Austin Beerworks</a></li>
+                                </ul>
+                            </div>
+                            <!-- dropdown button -->
+                            <div class="dropdown nav-item">
+                                <button class="btn dropdown-toggle" type="button" id="dropdown-bike" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Bike Trails
+                                </button>
+                                <!-- dropdown options -->
+                                <ul class="dropdown-menu" aria-labelledby="dropdown-bike">
+                                    <li><a class="dropdown-item" href="https://www.austintexas.gov/department/southern-walnut-creek-trail">Southern Walnut Creek</a></li>
+                                    <li><a class="dropdown-item" href="https://www.austintexas.gov/department/veloway">Veloway</a></li>
+                                    <li><a class="dropdown-item" href="https://tpwd.texas.gov/state-parks/pedernales-falls">Pedernales Falls</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- post card starts here -->
+            {{#each events }}
+            <div class="row m-4 dir-dis">
+            <div class="card shadow-lg post-display">
+                <div class="card-body">
+                    <!-- event_name here -->
+                    <h4 class="card-title"><span>{{event_name}}</span></h4>
+                <div class="">
+                    <!-- event_date event_start_time here -->
+                    <p class="card-text">{{event_date}} {{event_start_time}} {{event_end_time}}</p>
+                    <!-- event_location here -->
+                    <p class="card-text">{{event_location}}</p>
+                    <!-- event_description here -->
+                    <p class="card-text">{{event_description}}</p>
+                    <div class="text-center">
+                        <!-- retrieve post information and redirect to individual post -->
+                        <button type="submit" class="btn m-3">View Details</button>
+                        <button type="submit" class="btn m-3">I'm Interested</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            {{/each}}
+            <!-- post card ends here -->
+        </div>
+    <!-- end post displays -->
+    <!-- vertical banner -->
+        <div class="col-sm-5">
+            <div class="card m-4 shadow-lg">
+                <div class="row">
+                <div class="card-body col-sm-6 mt-3">
+                    <h4 class="card-title vert-column-header"><span>Welcome Back, User!</span></h4>
+                    <div class= "text-center">
+                        <button type="button" id="create-event-btn" class="btn m-2" data-bs-toggle="modal" data-bs-target="#create-event">Create Event</button>
+                        <button type="button" id="view-event-btn" class="btn m-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">View Events</button>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" id="logout-btn" class="btn m-2">Logout</button>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img src="/images/zilker-img-01.jpg" class="img-fluid vert-banner">
+                </div>
+                </div>
+            </div>
+        </div>
+    <!-- end vertical banner -->
+    </section>
+    <!-- create event modal -->
+    <div class="modal fade" id="create-event" tabindex="-1" aria-labelledby="Create Event"
+    aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                    <div class="col-sm-7">
+                    <div class="model-header m-1 mt-3 mb-4">
+                        <h4 class="modal-title" id="modal-title"><span>Create An Event</span></h4>
+                    </div>
+                    <form class="new-event-form">
+                        <div class="row m-1">
+                        <!-- event_name entered here -->
+                        <div class="col m-1">
+                            <input type="string" class="form-control" name="event-name" placeholder="Event Name (Required)">
+                        </div>
+                        <!-- event_location entered here -->
+                        <div class="col m-1">
+                            <input type="string" class="form-control" name="event-location" placeholder="Location (Required)">
+                        </div>
+                        </div>
+                        <div class="row m-1">
+                            <!-- date/time picker will go here -->
+                            <div class="col m-1">
+
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                        <!-- event_description entered here -->
+                            <div class="col m-1">
+                                <input type="text" class="form-control" name="event-description" placeholder="Description (Required)">
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <!-- event_url entered here -->
+                            <div class="col m-1">
+                                <input type="string" class="form-control" name="event-url" placeholder="Event Link">
+                            </div>
+                            <!-- user_id entered here -->
+                            <div class="col m-1">
+                                <input type="text" class="form-control" placeholder="Host Name (Required)">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn post-event">Post Event</button>
+                    </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <img src="/images/modal-vertical-banner.jpg" class="img-fluid modal-banner" alt="create-event-banner">
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end event modal -->
+    <!-- create offcanvas right event list -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasRightLabel">My Event List</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="view-interested">
+                <h4 class="card-title"><span>Pick Up Soccer 9v9</span></h4>
+                <div class="">
+                    <!-- event_date event_start_time here -->
+                    <p class="card-text">Tuesday 6/4/22 6PM</p>
+                    <!-- event_location here -->
+                    <p class="card-text"> Zilker Park Austin TX.</p>
+                    <button type="submit" class="btn">View Details</button>
+                    <button type="submit" class="btn">Remove</button>
+                </div>
+            </div>
+        </div>
+        {{!-- scripts --}}
+        <script src="/javascript/add-event.js"></script>
