@@ -32,13 +32,14 @@ router.get('/', (req,res) =>{
     })
 });
 
-// // login route
-// router.get('/login', (req, res) =>{
-//     if(req.session.loggedIn){
-//         res.render('directory');
-//         return;
-//     }
-// });
+// login route
+router.get('/login', (req, res) =>{
+    if(req.session.loggedIn){
+        res.render('directory');
+        return;
+    }
+    res.render('login-page');
+});
 
 module.exports = router;
 

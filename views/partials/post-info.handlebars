@@ -1,27 +1,29 @@
 <div class="event-info container-fluid text-center pt-3">
-      <div class="text-center container fluid">
-        <p class="date">{{date}}</p>
-        <p class="title">{{title}}</p>
-        <p class="user">Hosted by: {{username}}</p>
+  <div class="text-center container fluid">
+    <p class="date">{{event_date}}</p>
+    <p class="title">{{event_name}}</p>
+    <p class="user">Hosted by: {{username}}</p>
+  </div>
+</div>
+
+<!-- main body -->
+<div class="main row container-fluid p-3">
+  <!-- side banner -->
+  <div class="side-banner col-lg-3">
+    <img class="" src="../public/images/megan-bucknall-CqKmePB63GE-unsplash.jpg">
+  </div>
+
+  <!-- main event info with comments -->
+  <div class="main-event col-lg-6 rounded">
+    <div class="description rounded p-2">
+      <p class="title">{{event_name}}</p>
+      <p clas="desctiption">{{event_description}}</p>
+      {{#if event_url}}
+      <div class="more-info row">
+        <p class="title col-6 text-center">More Info:</p>
+        <p class="content col-6"><a href={{event_url}} target="_blank">{{event_name}}</a></p>
       </div>
+      {{/if}}
     </div>
-
-    <!-- main body -->
-    <div class="main row container-fluid p-3">
-      <!-- side banner -->
-      <div class="side-banner col-lg-3">
-        <img class="" src="../public/images/megan-bucknall-CqKmePB63GE-unsplash.jpg">
-      </div>
-
-      <!-- main event info with comments -->
-      <div class="main-event col-lg-6 rounded">
-        <div class="description rounded p-2">
-          <p class="title">{{title}}</p>
-          <p clas="desctiption">{{description}}</p>
-          {{#if event link provided}}
-          <div class="more-info row">
-            <p class="title col-6 text-center">More Info:</p>
-            <p class="content col-6"><a href="{{Event link}}" target="_blank">{{event name}}</a></p>
-          </div>
-          {{/if}}
-        </div>
+  </div>
+</div>
