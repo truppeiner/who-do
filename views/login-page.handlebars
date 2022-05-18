@@ -1,40 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>who do?</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/stylesheets/loginStyles.css">
-    <!-- icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
-
-</head>
-<body>
-    <!-- begin header/navbar -->
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid justify-content-center">
-                <a href="#" class="navbar-brand h2"><span class="h2">Who Do?</span></a>
-            </div>
-        </nav>
-    </header>
-    <!-- end header/navbar -->
-    <!-- begin log in card -->
+<!-- begin log in card -->
     <div class="row">
         <section class="col-sm-5 container ">
             <div class="card shadow-lg login">
             <div class="row">
                 <!-- vert banner here  -->
             <div class="col-sm-5">
-                <img src="../public/images/vert-Banner-Sign-In.jpg" class="img-fluid signup-img">
+                <img src="/images/vert-Banner-Sign-In.jpg" class="img-fluid signup-img">
             </div>
             <div class="col-sm-7 mt-4">
             <h3 class="mb-5"><span>Sign Into Your Account</span></h3>
@@ -44,14 +15,14 @@
                     <span class="material-symbols-outlined">
                     mail
                     </span>
-                    <input type="email" class="form-control" id="email-login" placeholder="Email Address">
+                    <input type="text" class="form-control" id="email-login" placeholder="Email Address"/>
                 </div>
                 <!-- password input -->
                 <div class="m-4 password-entry">
                     <span class="material-symbols-outlined">
                     password
                     </span>
-                    <input type="password" class="form-control" id="password-login" placeholder="Password">
+                    <input type="password" class="form-control" id="password-login" placeholder="Password"/>
                 </div>
                 <div class="submit-Btn text-center">
                 <button type="submit" class="btn mb-3">Login</button>
@@ -68,7 +39,7 @@
             <div class="row">
                 <!-- vert banner here -->
             <div class="col-sm-5">
-                <img src="../public/images/vert-Banner-01.jpg" class="img-fluid signup-img">
+                <img src="/images/vert-Banner-01.jpg" class="img-fluid signup-img">
             </div>
             <div class="col-sm-7 mt-4">
             <h3 class="mb-5"><span>Create Account</span></h3>
@@ -123,10 +94,4 @@
             </div>
         </section>
     </div>
-    <!-- begin footer -->
-    <footer>
-
-    </footer>
-    <!-- end footer -->
-</body>
-</html>
+    <script src="/javascript/login.js" ></script>
