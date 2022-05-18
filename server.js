@@ -24,13 +24,9 @@ app.use(session(sess));
 
 // const helpers = require('./utils/helpers');
 
-<<<<<<< HEAD
-const hbs = exphbs.create({/* helpers */});
-=======
 const hbs = exphbs.create({ 
   // helpers 
 });
->>>>>>> develop
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
