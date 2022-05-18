@@ -116,8 +116,6 @@ Event.init(
         isURL: true
       }
     },
-<<<<<<< HEAD
-=======
     // user_name: {
     //   type: DataTypes.STRING,
     //   references: {
@@ -125,7 +123,6 @@ Event.init(
     //     // key: 'id'
     //   }
     // },
->>>>>>> feature/frontpage-dashboard-templating
     user_id: {
       type: DataTypes.INTEGER,
       references: {

@@ -1,0 +1,24 @@
+<div class="col-sm-7">
+  {{#each}}
+  <!-- post card starts here -->
+  <div class="card shadow-lg post-display">
+      <div class="card-body">
+          <!-- event_name here -->
+          <h4 class="card-title"><span>{{title}}</span></h4>
+      <div class="">
+          <!-- event_date event_start_time here -->
+          <p class="card-text">{{date}}</p>
+          <!-- event_location here -->
+          <p class="card-text"> {{location}}</p>
+          <!-- event_description here -->
+          <p class="card-text">{{description}}</p>
+          <div class="submit-Btn text-center">
+              <!-- retrieve post information and redirect to individual post -->
+              <button type="submit" class="btn m-3">Check Out This Event</button>
+          </div>
+      </div>
+      </div>
+  </div>
+  {{/each}}
+  <!-- post card ends here -->
+</div>
