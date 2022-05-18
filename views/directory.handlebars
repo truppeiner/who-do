@@ -1,41 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>who do?</title>
-    <!-- stylesheets -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/stylesheets/directoryStyles.css">
-    <!-- icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- begin header/navbar -->
-    <header>
-        <nav class="navbar navbar-expand-lg">
-          <div class="row container-fluid">
-            <div class="col-1"></div>
-            <a href="#" class="navbar-brand h2 col-10 justify-content-center text-center"><span class="h2">Who Do?</span></a>
-            <a class="col-1 justify-content-end text-end p-1" href=""><span class="material-symbols-outlined">
-              logout
-              </span></a>
-          </div> 
-        </nav>
-    </header>
-    <!-- end header/navbar -->
-    <!-- horizontal banner -->
-    <!-- <div class="row">
-        <div class="col container">
-            <img src="../public/images/zilker-horizontal-banner.jpg" class="img-fluid">
-        </div>
-    </div> -->
-    <!-- end horizontal banner -->
-    <section class="row">
+<link rel="stylesheet" href="/stylesheets/directoryStyles.css">
+<section class="row">
     <!-- post displays -->
         <div class="col-sm-7">
             <div clas="row m-4">
@@ -85,19 +49,20 @@
                     </nav>
                 </div>
             </div>
-            <div class="row m-4">
             <!-- post card starts here -->
+            {{#each events }}
+            <div class="row m-4 dir-dis">
             <div class="card shadow-lg post-display">
                 <div class="card-body">
                     <!-- event_name here -->
-                    <h4 class="card-title"><span>Pick Up Soccer 9v9</span></h4>
+                    <h4 class="card-title"><span>{{event_name}}</span></h4>
                 <div class="">
                     <!-- event_date event_start_time here -->
-                    <p class="card-text">Tuesday 6/4/22 6PM</p>
+                    <p class="card-text">{{event_date}} {{event_start_time}} {{event_end_time}}</p>
                     <!-- event_location here -->
-                    <p class="card-text"> Zilker Park Austin TX.</p>
+                    <p class="card-text">{{event_location}}</p>
                     <!-- event_description here -->
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="card-text">{{event_description}}</p>
                     <div class="text-center">
                         <!-- retrieve post information and redirect to individual post -->
                         <button type="submit" class="btn m-3">View Details</button>
@@ -107,6 +72,7 @@
                 </div>
             </div>
             </div>
+            {{/each}}
             <!-- post card ends here -->
         </div>
     <!-- end post displays -->
@@ -125,7 +91,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <img src="../public/images/zilker-img-01.jpg" class="img-fluid vert-banner">
+                    <img src="/images/zilker-img-01.jpg" class="img-fluid vert-banner">
                 </div>
                 </div>
             </div>
@@ -143,15 +109,15 @@
                     <div class="model-header m-1 mt-3 mb-4">
                         <h4 class="modal-title" id="modal-title"><span>Create An Event</span></h4>
                     </div>
-                    <form>
+                    <form class="new-event-form">
                         <div class="row m-1">
                         <!-- event_name entered here -->
                         <div class="col m-1">
-                            <input type="string" class="form-control" placeholder="Event Name (Required)">
+                            <input type="string" class="form-control" name="event-name" placeholder="Event Name (Required)">
                         </div>
                         <!-- event_location entered here -->
                         <div class="col m-1">
-                            <input type="string" class="form-control" placeholder="Location (Required)">
+                            <input type="string" class="form-control" name="event-location" placeholder="Location (Required)">
                         </div>
                         </div>
                         <div class="row m-1">
@@ -163,13 +129,13 @@
                         <div class="row m-1">
                         <!-- event_description entered here -->
                             <div class="col m-1">
-                                <input type="text" class="form-control" placeholder="Description (Required)">
+                                <input type="text" class="form-control" name="event-description" placeholder="Description (Required)">
                             </div>
                         </div>
                         <div class="row m-1">
                             <!-- event_url entered here -->
                             <div class="col m-1">
-                                <input type="string" class="form-control" placeholder="Event Link">
+                                <input type="string" class="form-control" name="event-url" placeholder="Event Link">
                             </div>
                             <!-- user_id entered here -->
                             <div class="col m-1">
@@ -183,7 +149,7 @@
                     </div>
                     </div>
                     <div class="col-sm-5">
-                        <img src="../public/images/modal-vertical-banner.jpg" class="img-fluid modal-banner" alt="create-event-banner">
+                        <img src="/images/modal-vertical-banner.jpg" class="img-fluid modal-banner" alt="create-event-banner">
                     </div>
                     </div>
                     
@@ -211,10 +177,6 @@
                 </div>
             </div>
         </div>
-    <!-- end offcanvas right event list -->
-    <!-- footer -->
-    <!-- end footer -->
-    <!-- javscripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
-</html>
+        {{!-- scripts --}}
+        <script src="/javascript/add-event.js"></script>
+        <script src="/javascript/logout.js"></script>

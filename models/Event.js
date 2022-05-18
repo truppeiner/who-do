@@ -116,6 +116,16 @@ Event.init(
         isURL: true
       }
     },
+<<<<<<< HEAD
+=======
+    // user_name: {
+    //   type: DataTypes.STRING,
+    //   references: {
+    //     model: 'user'
+    //     // key: 'id'
+    //   }
+    // },
+>>>>>>> feature/frontpage-dashboard-templating
     user_id: {
       type: DataTypes.INTEGER,
       references: {
