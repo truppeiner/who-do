@@ -35,5 +35,5 @@ async function newFormHandler(event) {
     }
   }
   
-  document.querySelector('#event-create').addEventListener('submit', newFormHandler);
+  document.querySelector('#event-create').addEventListener('click', newFormHandler);
   
