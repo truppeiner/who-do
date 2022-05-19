@@ -65,8 +65,7 @@
                     <p class="card-text">{{event_description}}</p>
                     <div class="text-center">
                         <!-- retrieve post information and redirect to individual post -->
-                        <button type="submit" class="btn m-3">View Details</button>
-                        <button type="submit" class="btn m-3">I'm Interested</button>
+                        <button type="submit" class="btn m-3"><a href="/event/{{id}}">View Details</a></button>
                     </div>
                 </div>
                 </div>
@@ -85,9 +84,6 @@
                     <div class= "text-center">
                         <button type="button" id="create-event-btn" class="btn m-2" data-bs-toggle="modal" data-bs-target="#create-event">Create Event</button>
                         <button type="button" id="view-event-btn" class="btn m-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">View Events</button>
-                    </div>
-                    <div class="text-center">
-                        <button type="button" id="logout" class="btn m-2">Logout</button>
                     </div>
                 </div>
                 <div class="col-sm-6">
