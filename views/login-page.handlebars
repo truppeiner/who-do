@@ -1,27 +1,28 @@
-<div class="row">
+<!-- begin log in card -->
+    <div class="row">
         <section class="col-sm-5 container ">
             <div class="card shadow-lg login">
             <div class="row">
                 <!-- vert banner here  -->
             <div class="col-sm-5">
-                <img src="../public/images/vert-Banner-Sign-In.jpg" class="img-fluid signup-img">
+                <img src="/images/vert-Banner-Sign-In.jpg" class="img-fluid signup-img">
             </div>
             <div class="col-sm-7 mt-4">
             <h3 class="mb-5"><span>Sign Into Your Account</span></h3>
-            <form>
+            <form class="login-form">
                 <!-- email input -->
                 <div class="m-4">
                     <span class="material-symbols-outlined">
                     mail
                     </span>
-                    <input type="email" class="form-control" placeholder="Email Address">
+                    <input type="text" class="form-control" id="email-login" placeholder="Email Address"/>
                 </div>
                 <!-- password input -->
                 <div class="m-4 password-entry">
                     <span class="material-symbols-outlined">
                     password
                     </span>
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" class="form-control" id="password-login" placeholder="Password"/>
                 </div>
                 <div class="submit-Btn text-center">
                 <button type="submit" class="btn mb-3">Login</button>
@@ -38,11 +39,11 @@
             <div class="row">
                 <!-- vert banner here -->
             <div class="col-sm-5">
-                <img src="../public/images/vert-Banner-01.jpg" class="img-fluid signup-img">
+                <img src="/images/vert-Banner-01.jpg" class="img-fluid signup-img">
             </div>
             <div class="col-sm-7 mt-4">
             <h3 class="mb-5"><span>Create Account</span></h3>
-            <form>
+            <form class="signup-form">
                 <div class="m-4">
                     <div class="row">
                         <div class="col">
@@ -50,14 +51,14 @@
                             <span class="material-symbols-outlined">
                             account_circle
                             </span>
-                            <input type="text" class="form-control" placeholder="Username">
+                            <input type="text" class="form-control" id="username-signup" placeholder="Username">
                         </div>
                         <div class="col">
                     <!-- email input -->
                             <span class="material-symbols-outlined">
                             mail
                             </span>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" id="email-signup" placeholder="Email">
                         </div>
                     </div>
                 </div>
@@ -66,7 +67,7 @@
                     <span class="material-symbols-outlined">
                     password
                     </span>
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" class="form-control" id="password-signup" placeholder="Password">
                 </div>
                 <div class="submit-Btn text-center">
                 <button type="submit" class="btn mb-3">Sign Up</button>
@@ -93,3 +94,4 @@
             </div>
         </section>
     </div>
+    <script src="/javascript/login.js" ></script>

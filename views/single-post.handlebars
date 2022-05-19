@@ -5,12 +5,12 @@
 
 <!-- time date and location -->
 <div class="location col-lg-3 rounded p-5">
-  <p class="location-text">{{event.event_date}}</p>
-  <p class="location-text">{{event.event_start_time}} to {{event.event_end_time}}</p>
-  <p class="location-text">{{event.event_location}}</p>
+  <p class="location-text">{{event_date}}</p>
+  <p class="location-text">{{event_start_time}} to {{event_end_time}}</p>
+  <p class="location-text">{{event_location}}</p>
   <iframe class="justify-content-center" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27550.02226964026!2d-97.730598!3d30.329548950000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1652575859718!5m2!1sen!2sus" width="75%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   <div class="attending ">
-    <p>Interested: {{interested count}}</p>
-    <p>Going: {{going count}}</p>
+    <p>Interested: {{rsvp_interested_count}}</p>
+    <p>Going: {{rsvp_yes_count}}</p>
   </div>
 </div>

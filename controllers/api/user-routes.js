@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Event, Comment, RSVP_Interested, RSVP_Yes } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // get all users
 router.get('/', (req, res) => {
@@ -68,11 +69,10 @@ router.post('/', (req, res) => {
         password: req.body.password
     })
     .then(dbUserData => {
-        res.session.save(() => {
+        req.session.save(() => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
-
             res.json(dbUserData);
         });
     })
@@ -113,7 +113,7 @@ router.post('/login', (req, res) => {
 });
 
 // logout
-router.post('/logout', (req, res) => {
+router.post('/logout', withAuth, (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
@@ -124,7 +124,7 @@ router.post('/logout', (req, res) => {
 });
 
 // update user
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     User.update(req.body, {
         individualHooks: true,
         where: {
@@ -145,7 +145,7 @@ router.put('/:id', (req, res) => {
 });
 
 // delete user
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     User.destroy({
         where: {
             id: req.params.id
