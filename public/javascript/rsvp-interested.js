@@ -21,4 +21,4 @@ async function rsvp_interestedClickHandler(event) {
     }
   }
   
-  document.querySelector('.rsvp_interested-btn').addEventListener('click', rsvp_interestedClickHandler);
+  document.querySelector('.interested-btn').addEventListener('click', rsvp_interestedClickHandler);
