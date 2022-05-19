@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Event, User, Comment, RSVP_Interested, RSVP_Yes, } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // get all events
 router.get('/', (req, res) => {
@@ -91,7 +92,7 @@ router.get('/:id', (req, res) => {
 });
 
 // post an event
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Event.create({
         event_name: req.body.event_name,
         event_description: req.body.event_description,
@@ -112,7 +113,7 @@ router.post('/', (req, res) => {
 
 
 // add/remove/update a rsvp_interested
-router.put('/rsvp_interested', (req, res) => {
+router.put('/rsvp_interested', withAuth, (req, res) => {
      if (req.session) {
          Event.rsvp_interested({ ...req.body, user_id: req.session.user_id }, { RSVP_Interested, Comment, User })
        .then(updatedRsvp_InterestedData => res.json(updatedRsvp_InterestedData))
@@ -126,7 +127,7 @@ router.put('/rsvp_interested', (req, res) => {
 
 
 // add/remove/update a rsvp_yes
-router.put('/rsvp_yes', (req, res) => {
+router.put('/rsvp_yes', withAuth, (req, res) => {
 if (req.session) {
          Event.rsvp_yes({ ...req.body, user_id: req.session.user_id }, { RSVP_Yes, Comment, User })
          .then(updatedRsvp_YesData => res.json(updatedRsvp_YesData))
@@ -138,7 +139,7 @@ if (req.session) {
  });
  
 // update an event
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Event.update(
         {
             event_name: req.body.event_name,
@@ -169,7 +170,7 @@ router.put('/:id', (req, res) => {
 });
 
 // delete an event
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Event.destroy({
         where: {
             id: req.params.id

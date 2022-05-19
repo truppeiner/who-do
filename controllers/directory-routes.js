@@ -5,7 +5,7 @@ const { Event, User, Comment, RSVP_Interested, RSVP_Yes } = require('../models')
 router.get('/', (req, res) => {
 
     if (!req.session.loggedIn) {
-        res.render('login');
+        res.render('login-page');
         return;
     }
     Event.findAll({
