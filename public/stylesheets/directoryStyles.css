@@ -18,7 +18,8 @@ header nav div a span {
 
 body {
     font-family: 'Lora', serif;
-    /* background-image: linear-gradient(to bottom right, var(--background-color), #FFFDD0 ); */
+    background-image: linear-gradient(to bottom right, var(--background-color), #FFFDD0 );
+    padding-bottom: 100px;
 }
 /* dropdown navbar styling */
 .welcome-header {
@@ -72,6 +73,10 @@ h3,h5 {
     color: var(--background-color);
 }
 
+.details-btn a {
+    text-decoration: none;
+    color: var(--background-color);
+}
 /* vert column styling */
 
 .vert-column-header {
