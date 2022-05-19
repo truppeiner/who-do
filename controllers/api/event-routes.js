@@ -102,7 +102,6 @@ router.post('/', withAuth, (req, res) => {
         event_end_time: req.body.event_end_time,
         event_url: req.body.event_url,
         user_id: req.session.user_id,
-        username: req.session.username
     })
     .then(dbEventData => res.json(dbEventData))
     .catch(err => {
@@ -111,9 +110,8 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
-
 // add an rsvp_interested
-router.put('/rsvp_interested',  (req, res) => {
+router.put('/rsvp_interested', withAuth, (req, res) => {
   RSVP_Yes.destroy({
       where: {
           event_id: req.body.event_id, 
@@ -145,7 +143,7 @@ router.put('/rsvp_interested',  (req, res) => {
 });
 
 // add an rsvp_yes
-router.put('/rsvp_yes',  (req, res) => {
+router.put('/rsvp_yes', withAuth, (req, res) => {
     RSVP_Interested.destroy({
         where: {
             event_id: req.body.event_id, 
