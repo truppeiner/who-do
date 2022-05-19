@@ -112,32 +112,70 @@ router.post('/', withAuth, (req, res) => {
 });
 
 
-// add/remove/update a rsvp_interested
-router.put('/rsvp_interested', withAuth, (req, res) => {
-     if (req.session) {
-         Event.rsvp_interested({ ...req.body, user_id: req.session.user_id }, { RSVP_Interested, Comment, User })
-       .then(updatedRsvp_InterestedData => res.json(updatedRsvp_InterestedData))
-       .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-         });
-     }
-
+// add an rsvp_interested
+router.put('/rsvp_interested',  (req, res) => {
+  RSVP_Yes.destroy({
+      where: {
+          event_id: req.body.event_id, 
+          user_id: req.session.user_id ? req.session.user_id : req.body.user_id
+      } 
+  }) 
+  .then(() => {
+    RSVP_Interested.create({
+        event_id: req.body.event_id, 
+        user_id: req.session.user_id ? req.session.user_id : req.body.user_id
+    })
+    .then(updatedRsvp_InterestedData => {
+        RSVP_Interested.findAll({
+            where: {
+                event_id: req.body.event_id
+            }
+        }) .then(interested_users => {
+           res.json({
+            updatedRsvp_InterestedData,
+            interested_count: interested_users.length
+           })
+        })
+    })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  })
 });
 
-
-// add/remove/update a rsvp_yes
-router.put('/rsvp_yes', withAuth, (req, res) => {
-if (req.session) {
-         Event.rsvp_yes({ ...req.body, user_id: req.session.user_id }, { RSVP_Yes, Comment, User })
-         .then(updatedRsvp_YesData => res.json(updatedRsvp_YesData))
-         .catch(err => {
-            console.log(err);
-             res.status(500).json(err);
+// add an rsvp_yes
+router.put('/rsvp_yes',  (req, res) => {
+    RSVP_Interested.destroy({
+        where: {
+            event_id: req.body.event_id, 
+            user_id: req.session.user_id ? req.session.user_id : req.body.user_id
+        } 
+    }) 
+    .then(() => {
+      RSVP_Yes.create({
+          event_id: req.body.event_id, 
+          user_id: req.session.user_id ? req.session.user_id : req.body.user_id
+      })
+      .then(updatedRsvp_YesData => {
+          RSVP_Yes.findAll({
+              where: {
+                  event_id: req.body.event_id
+              }
+          }) .then(going_users => {
+             res.json({
+              updatedRsvp_YesData,
+              going_count: going_users.length
+             })
+          })
+      })
+        .catch(err => {
+          console.log(err);
+          res.status(500).json(err);
         });
-    }
- });
- 
+    })
+  });
+
 // update an event
 router.put('/:id', withAuth, (req, res) => {
     Event.update(
