@@ -1,4 +1,6 @@
+<head>
 <link rel="stylesheet" href="/stylesheets/directoryStyles.css">
+</head>
 <section class="row">
     <!-- post displays -->
         <div class="col-sm-7">
@@ -55,14 +57,14 @@
             <div class="card shadow-lg post-display">
                 <div class="card-body">
                     <!-- event_name here -->
-                    <h4 class="card-title"><span>{{event_name}}</span></h4>
+                    <h4 class="card-title"><span>{{event.event_name}}</span></h4>
                 <div class="">
                     <!-- event_date event_start_time here -->
-                    <p class="card-text">{{event_date}} {{event_start_time}} {{event_end_time}}</p>
+                    <p class="card-text">{{event.event_date}} {{event.event_start_time}} {{event.event_end_time}}</p>
                     <!-- event_location here -->
-                    <p class="card-text">{{event_location}}</p>
+                    <p class="card-text">{{event.event_location}}</p>
                     <!-- event_description here -->
-                    <p class="card-text">{{event_description}}</p>
+                    <p class="card-text">{{event.event_description}}</p>
                     <div class="text-center">
                         <!-- retrieve post information and redirect to individual post -->
                         <button type="submit" class="btn m-3"><a href="/event/{{id}}">View Details</a></button>
@@ -176,3 +178,4 @@
         {{!-- scripts --}}
         <script src="/javascript/add-event.js"></script>
         <script src="/javascript/logout.js"></script>
+     
