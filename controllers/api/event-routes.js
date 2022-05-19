@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Event, User, Comment, RSVP_Interested, RSVP_Yes, } = require('../../models');
+//const withAuth = require('../../utils/auth');
 
 // get all events
 router.get('/', (req, res) => {
@@ -113,32 +114,27 @@ router.post('/', (req, res) => {
 
 // add/remove/update a rsvp_interested
 router.put('/rsvp_interested', (req, res) => {
-     if (req.session) {
-         Event.rsvp_interested({ ...req.body, user_id: req.session.user_id }, { RSVP_Interested, Comment, User })
-       .then(updatedRsvp_InterestedData => res.json(updatedRsvp_InterestedData))
-       .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-         });
-     }
-
+  Event.rsvp_interested({ ...req.body, user_id: req.session.user_id }, { RSVP_Interested, Comment, User })
+    .then(updatedRsvp_InterestedData => res.json(updatedRsvp_InterestedData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
 });
 
 
 // add/remove/update a rsvp_yes
 router.put('/rsvp_yes', (req, res) => {
-if (req.session) {
-         Event.rsvp_yes({ ...req.body, user_id: req.session.user_id }, { RSVP_Yes, Comment, User })
-         .then(updatedRsvp_YesData => res.json(updatedRsvp_YesData))
-         .catch(err => {
-            console.log(err);
-             res.status(500).json(err);
-        });
-    }
+    Event.rsvp_yes({ ...req.body, user_id: req.session.user_id }, { RSVP_Yes, Comment, User })
+    .then(updatedRsvp_YesData => res.json(updatedRsvp_YesData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
  });
  
 // update an event
-router.put('/:id', (req, res) => {
+router.put('/:id',  (req, res) => {
     Event.update(
         {
             event_name: req.body.event_name,
@@ -147,7 +143,6 @@ router.put('/:id', (req, res) => {
             event_date: req.body.event_date,
             event_start_time: req.body.event_start_time,
             event_end_time: req.body.event_end_time
-
         },
         {
             where: {
