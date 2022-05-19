@@ -52,6 +52,16 @@ h3,h5 {
 
 }
 
+#event-date {
+    font-family: 'Lora', serif;
+    border: none;
+}
+
+.eventdate {
+    font-family: 'Lora', serif;
+    color: var(--primary-color);
+}
+
 .post-display .card-body .card-title span {
     border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 2px;
