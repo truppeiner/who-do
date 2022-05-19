@@ -18,7 +18,7 @@ async function newFormHandler(event) {
         event_date,
         event_start_time,
         event_end_time,
-        event_url,
+        event_url
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -33,5 +33,5 @@ async function newFormHandler(event) {
     }
   }
   
-  document.querySelector('.new-event-form').addEventListener('submit', newFormHandler);
+  document.querySelector('#event-create').addEventListener('click', newFormHandler);
   
