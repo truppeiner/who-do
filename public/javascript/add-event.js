@@ -8,7 +8,6 @@ async function newFormHandler(event) {
     const event_start_time = document.querySelector('input[name="event-start-time"]').value;
     const event_end_time = document.querySelector('input[name="event-end-time"]').value;
     const event_url = document.querySelector('input[name="event-url"]').value;
-    const user_id = session.user_id;
 
     const response = await fetch(`/api/events`, {
       method: 'POST',
@@ -19,8 +18,7 @@ async function newFormHandler(event) {
         event_date,
         event_start_time,
         event_end_time,
-        event_url,
-        user_id
+        event_url
       }),
       headers: {
         'Content-Type': 'application/json'
