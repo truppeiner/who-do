@@ -14,6 +14,13 @@ header nav div a span {
     color: var(--primary-color);
 }
 
+.title {
+    color: var(--primary-color);
+}
+
+.title h1 span {
+    border-bottom: 2px solid var(--secondary-color);
+}
 /* end header style */
 
 /* body styling */
@@ -21,12 +28,14 @@ body {
     font-family: 'Lora', serif;
     background-image: linear-gradient(to bottom right, var(--background-color), #FFFDD0 );
     padding-bottom: 60px;
+    min-height: 100vh;
+    min-width: 100vh;
 }
 /* card styling */
 .card {
     border-radius: 1rem;
     border-color: var(--primary-color-light);
-    margin-top: 80px;
+    margin-top: 60px;
     background-color: var(--primary-color-light);
 }
 
@@ -81,4 +90,12 @@ h4 span {
     text-decoration: none;
     background-color: var(--secondary-color);
     color: var(--background-color);
+}
+
+/* vert banner styling */
+
+.vert-banner-side {
+    object-fit: cover;
+    object-position: right;
+    border-left: 5px solid var(--secondary-color);
 }

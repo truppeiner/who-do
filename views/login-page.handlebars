@@ -3,42 +3,73 @@
 </head>
 <!-- begin log in card -->
     <div class="row">
-        <section class="col-sm-5 container ">
+        <section class="col-sm-5 container">
+            <div class="text-center mt-3 title">
+            <h1><span>Who Do?</span></h1>
+            </div>
             <div class="card shadow-lg login">
-            <div class="row">
+                <div class="row">
                 <!-- vert banner here  -->
-            <div class="col-sm-5">
-                <img src="/images/vert-Banner-Sign-In.jpg" class="img-fluid signup-img">
-            </div>
-            <div class="col-sm-7 mt-4">
-            <h3 class="mb-5"><span>Sign Into Your Account</span></h3>
-            <form class="login-form">
-                <!-- email input -->
-                <div class="m-4">
-                    <span class="material-symbols-outlined">
-                    mail
-                    </span>
-                    <input type="text" class="form-control" id="email-login" placeholder="Email Address"/>
+                <div class="col-sm-5">
+                    <img src="/images/vert-Banner-Sign-In.jpg" class="img-fluid signup-img">
                 </div>
-                <!-- password input -->
-                <div class="m-4 password-entry">
-                    <span class="material-symbols-outlined">
-                    password
-                    </span>
-                    <input type="password" class="form-control" id="password-login" placeholder="Password"/>
+                <div class="col-sm-7 mt-4">
+                    <h3 class="mb-4"><span>Sign Into Your Account</span></h3>
+                <form class="login-form">
+                    <!-- email input -->
+                    <div class="m-4">
+                        <span class="material-symbols-outlined">
+                            mail
+                        </span>
+                        <input type="text" class="form-control" id="email-login" placeholder="Email Address"/>
+                    </div>
+                    <!-- password input -->
+                    <div class="m-4 password-entry">
+                        <span class="material-symbols-outlined">
+                            password
+                        </span>
+                        <input type="password" class="form-control" id="password-login" placeholder="Password"/>
+                    </div>
+                    <div class="row">
+                    <div class="col submit-Btn text-center">
+                        <button type="submit" class="btn mb-3">Login</button>
+                    </div>
+                    <div class="col text-center">
+                        <button type="button" class="btn mb-3">Sign Up</button>
+                    </div>
+                    </div>
+                </form>
                 </div>
-                <div class="submit-Btn text-center">
-                <button type="submit" class="btn mb-3">Login</button>
                 </div>
-            </form>
             </div>
-            </div>
+            {{!-- about us section --}}
+            <div class="row justify-content-center">
+        <section class="col">
+            <div class="card about-card shadow-lg">
+                <div class="card-body">
+                    <h4 class="card-title mb-4"><span>About Us</span></h4>
+                    <p class="card-text">Welcome to who-do! If you are new to Austin, then this is the place for you! Here you will find events in the community, posted by locals, for locals! So what are you waiting for? Create your account today, and find an event for you!</p>
+                    <div class="github">
+                        <button type="submit" class="btn mb-1">
+                        <a href="https://github.com/truppeiner/who-do"class=>GitHub</a>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
+    </div>
+        {{!-- end about us --}}
+        </section>
     <!-- end log in card -->
-    <!-- begin sign up card -->
-        <section class="col-sm-5 container">
-            <div class="card shadow-lg create-account">
+    <!-- begin vertical banner -->
+        <section class="col-sm-5">
+            <img src="/images/login-vert-banner-01.jpg" class="img-fluid vert-banner-side">
+        </section>
+    <!-- end vertical banner -->
+    </div>
+    <script src="/javascript/login.js" ></script>
+
+    {{!-- <div class="card shadow-lg create-account">
             <div class="row">
                 <!-- vert banner here -->
             <div class="col-sm-5">
@@ -78,23 +109,4 @@
             </form>
             </div>
             </div>
-            </div>
-        </section>
-    <!-- end sign up card-->
-    </div>
-    <div class="row justify-content-center">
-        <section class="col-sm-4">
-            <div class="card about-card shadow-lg">
-                <div class="card-body">
-                    <h4 class="card-title mb-4"><span>About Us</span></h4>
-                    <p class="card-text">Welcome to who-do! If you are new to Austin, then this is the place for you! Here you will find events in the community, posted by locals, for locals! So what are you waiting for? Create your account today, and find an event for you!</p>
-                    <div class="github">
-                        <button type="submit" class="btn mb-1">
-                        <a href="https://github.com/truppeiner/who-do"class=>GitHub</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <script src="/javascript/login.js" ></script>
+            </div> --}}
