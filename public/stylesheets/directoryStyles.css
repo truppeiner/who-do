@@ -19,7 +19,7 @@ header nav div a span {
 body {
     font-family: 'Lora', serif;
     background-image: linear-gradient(to bottom right, var(--background-color), #FFFDD0 );
-    padding-bottom: 100px;
+    padding-bottom: 150px;
 }
 /* dropdown navbar styling */
 .welcome-header {
@@ -98,7 +98,7 @@ h3,h5 {
 /* modal styling */
 
 .modal-content {
-    background-color: #FFFDD0;
+    background-color: var(--primary-color-light);
 }
 
 #modal-title {
@@ -117,6 +117,9 @@ h3,h5 {
     border-radius: .5rem;
 }
 
+.date-picker {
+    text-align: center;
+}
 .modal-footer{
     margin-top: 30px;
     margin-bottom: 10px;

@@ -99,12 +99,12 @@
     <!-- create event modal -->
     <div class="modal fade" id="create-event" tabindex="-1" aria-labelledby="Create Event"
     aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="row">
                     <div class="col-sm-7">
-                    <div class="model-header m-1 mt-3 mb-4">
+                    <div class="model-header m-1 mt-4 mb-4">
                         <h4 class="modal-title" id="modal-title"><span>Create An Event</span></h4>
                     </div>
                     <form class="new-event-form">
@@ -113,6 +113,7 @@
                         <div class="col m-1">
                             <input type="string" class="form-control" name="event-name" placeholder="Event Name (Required)">
                         </div>
+                        </div>
                         <div class="row m-1">
                         <!-- event_description entered here -->
                             <div class="col m-1">
@@ -120,24 +121,25 @@
                             </div>
                         </div>
                         <!-- event_location entered here -->
+                        <div class="row m-1">
                         <div class="col m-1">
                             <input type="string" class="form-control" name="event-location" placeholder="Location (Required)">
                         </div>
                         </div>
-                        <div class="row m-1">
+                        <div class="row m-1 date-picker">
                             <!-- date picker -->
                             <div class="col m-1">
-                                <label class="eventdate" for="event">Enter a date for your event:</label>
+                                <label class="eventdate" for="event">Date:</label>
                                 <input id="event-date" class="rounded" type="date" name="event-date">
                             </div>
                             <!-- Start time picker -->
                             <div class="col m-1">
-                                <label class="eventdate" for="event">Enter a start time for your event:</label>
+                                <label class="eventdate" for="event">Start Time:</label>
                                 <input id="event-start-time" class="rounded" type="time" name="event-start-time">
                             </div>
                             <!-- end time picker -->
                             <div class="col m-1">
-                                <label class="eventdate" for="event">Enter an end time for your event:</label>
+                                <label class="eventdate" for="event">End Time:</label>
                                 <input id="event-end-time" class="rounded" type="time" name="event-end-time">
                             </div>
                         </div>
@@ -158,7 +160,6 @@
                         <img src="/images/modal-vertical-banner.jpg" class="img-fluid modal-banner" alt="create-event-banner">
                     </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -183,6 +184,7 @@
                 </div>
             </div>
         </div>
+    </div>
         {{!-- scripts --}}
         <script src="/javascript/add-event.js"></script>
         <script src="/javascript/logout.js"></script>
