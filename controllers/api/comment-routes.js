@@ -14,18 +14,16 @@ router.get('/', (req, res) => {
 
 // create a comment
 router.post('/', withAuth, (req, res) => {
-    if (req.session) {
-        Comment.create({
-            comment_text: req.body.comment_text,
-            event_id: req.body.event_id,
-            user_id: req.body.user_id
-        })
-        .then(dbCommentData => res.json(dbCommentData))
-        .catch(err => {
-            console.log(err);
-            res.status(400).json(err);
-        });
-    }
+  Comment.create({
+    comment_text: req.body.comment_text,
+    user_id: req.session.user_id,
+    event_id: req.body.event_id    
+  })
+  .then(dbCommentData => res.json(dbCommentData))
+    .catch(err => {
+      console.log(err);
+      res.status(400).json(err);
+    });
 });
 
 // delete a comment
