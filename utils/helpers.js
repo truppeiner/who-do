@@ -1,3 +1,6 @@
+const moment = require("moment");
+const { parse } = require("path");
+
 module.exports = {
     format_date: date => {
       return `${new Date(date).getMonth() + 1}/${new Date(date).getDate() + 1}/${new Date(
@@ -16,7 +19,7 @@ module.exports = {
       if (amount !== 1) {
         return `${word}s`;
       }
-  
       return word;
-    }
+    },
+    
   };
