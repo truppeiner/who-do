@@ -116,13 +116,6 @@ Event.init(
         isURL: true
       }
     },
-    // user_name: {
-    //   type: DataTypes.STRING,
-    //   references: {
-    //     model: 'user'
-    //     // key: 'id'
-    //   }
-    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
