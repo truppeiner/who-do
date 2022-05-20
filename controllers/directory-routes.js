@@ -73,7 +73,8 @@ router.get('/event/:id', (req, res) => {
       'event_url',
       'user_id',
       'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM rsvp_yes WHERE event.id = rsvp_yes.event_id)'), 'rsvp_yes_count']
+      [sequelize.literal('(SELECT COUNT (*) FROM rsvp_interested WHERE event.id = rsvp_interested.event_id)'), 'rsvp_interested_count'],
+      [sequelize.literal('(SELECT COUNT (*) FROM rsvp_yes WHERE event.id = rsvp_yes.event_id)'), 'rsvp_yes_count']
     ],
     include: [
       {
