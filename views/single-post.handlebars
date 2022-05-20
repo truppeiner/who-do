@@ -1,0 +1,39 @@
+<link href="/stylesheets/singlePostStyles.css" rel="stylesheet">
+
+{{> post-info event}}
+
+{{> comments event.comments}}
+
+<div>
+  <form class="comment-form mx-5">
+    <div>
+      <textarea name="comment-body" class="rounded"></textarea>
+    </div>
+    <!-- buttons to add comments and say whether interested or going -->
+    <div class="buttons">
+      <button type="submit" class="add-comment-btn text-center rounded mb-3">Add comment</button>
+      <button type="button" class="interested-btn text-center rounded mb-3">I'm Interested</button>
+      <button type="button" class="going-btn text-center rounded mb-3">I'm Going</button>
+    </div>
+  </form>
+</div>
+
+<!-- time date and location -->
+<div class="location col-lg-3 rounded p-5">
+  <p class="location-text">{{event.event_date}}</p>
+  <p class="location-text">Starts: {{event.event_start_time}}</p>
+  <p class="location-text">Ends: {{event.event_end_time}}</p>
+  <p class="location-text">{{event.event_location}}</p>
+  <iframe class="justify-content-center" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27550.02226964026!2d-97.730598!3d30.329548950000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1652575859718!5m2!1sen!2sus" width="75%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="attending ">
+    <p>Interested: {{event.rsvp_interested_count}}</p>
+    <p>Going: {{event.rsvp_yes_count}}</p>
+  </div>
+</div>
+
+
+
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/logout.js"></script>
+<script src="/javascript/rsvp-interested.js"></script>
+<script src="/javascript/rsvp-yes.js"></script>
