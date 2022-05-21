@@ -1,4 +1,4 @@
-const {format_date, format_plural, format_url} = require('../utils/helpers');
+const {format_date, format_plural, format_url, format_time} = require('../utils/helpers');
 
 test('format_url() returns a simplified url string', () => {
   const url1 = format_url('http://test.com/page/1');
@@ -24,3 +24,10 @@ test('format_date() returns a date string', () => {
   expect(format_date(date)).toBe('3/20/2020');
 });
 
+test('format_time() returns a time string', () => {
+  const time = format_time('09:22:000');
+  const time2 = format_time('12:51:000');
+
+  expect(time).toBe('9:22 AM');
+  expect(time2).toBe('12:51 PM');
+});

@@ -1,3 +1,4 @@
+
 module.exports = {
     format_date: date => {
       return `${new Date(date).getMonth() + 1}/${new Date(date).getDate() + 1}/${new Date(
@@ -18,5 +19,13 @@ module.exports = {
       }
   
       return word;
+    },
+    format_time: time => {
+      const parsedTime = parseFloat(time.replaceAll(':', '.'));
+      const formattedTime = parsedTime.toString();
+      if (parsedTime >= 11.59) {
+        return `${formattedTime.replace('.', ':')} PM`;
+      }
+        return `${formattedTime.replace('.', ':')} AM`;
     }
   };
