@@ -110,4 +110,50 @@ router.get('/event/:id', (req, res) => {
   });
 });
 
+router.get('/:id', (req, res) => {
+  User.findOne({
+      attributes: { exclude: ['password'] },
+      where: {
+          id: req.session.id
+      },
+      include: [
+          {
+              model: Event,
+              attributes: ['id', 'event_name', 'event_description', 'event_location', 'event_date', 'event_start_time', 'event_end_time', 'event_url', 'user_id', 'created_at']
+          },
+          {
+              model: Comment,
+              attributes: ['id', 'comment_text', 'user_id', 'event_id', 'created_at'],
+              include: {
+                  model: Event,
+                  attributes: ['event_name']
+              }
+          },
+          {
+              model: Event,
+              attributes: ['id', 'event_name', 'event_description', 'event_location', 'event_date', 'event_start_time', 'event_end_time', 'event_url', 'user_id', 'created_at'],
+              through: RSVP_Interested,
+              as: 'interested'
+          },
+          {
+              model: Event,
+              attributes: ['id', 'event_name', 'event_description', 'event_location', 'event_date', 'event_start_time', 'event_end_time', 'event_url', 'user_id', 'created_at'],
+              through: RSVP_Yes,
+              as: 'going'
+          }
+      ]
+  })
+  .then(dbUserData => {
+      if (!dbUserData) {
+          res.status(404).json({ message: 'No user found with this id!' });
+          return;
+      }
+      res.json(dbUserData);
+  })
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
+});
+
 module.exports = router;
