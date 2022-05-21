@@ -18,11 +18,12 @@
 <body>
     <!-- begin header/navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="justify-content-center container-fluid">
+        <nav class="navbar navbar-expand-lg container-fluid">
+            <div class="col-1"></div>
+            <div class="col-10 justify-content-center container-fluid">
                 <a href="/" class="navbar-brand h2"><span class="h2">Who Do?</span></a>
             </div>
-            <div class="nav-item">
+            <div class="nav-item col-1 container-fluid">
                 {{#if loggedIn}}
                 <button id="logout" class="btn">logout</button>
                 {{/if}}

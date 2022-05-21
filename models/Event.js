@@ -112,17 +112,7 @@ Event.init(
     event_url: {
       type: DataTypes.STRING,
       allowNull: true,
-      validate: {
-        isURL: true
-      }
     },
-    // user_name: {
-    //   type: DataTypes.STRING,
-    //   references: {
-    //     model: 'user'
-    //     // key: 'id'
-    //   }
-    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

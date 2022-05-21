@@ -67,7 +67,7 @@ body {
   text-decoration: none;
 }
 
-.add-comment-btn, .interested-btn, .going-btn {
+.add-comment-btn, .interested-btn, .going-btn, #logout {
   font-family: 'Lora', serif;
   background-color: var(--secondary-color);
   color: var(--background-color);

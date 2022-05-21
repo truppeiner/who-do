@@ -1,11 +1,12 @@
 <div class="comments my-2 rounded p-2">
   <p class="comment-title">Comments:</p>
   {{#each this}}
-    <ul class="comment-list row mx-5">
+    <ul class="comment-list row mx-1">
       <li class="comment row">
-        <p class="comment-user col-1" >{{user.username}}:</p>
-        <p class="comment-content col-11 text-center" >{{comment_text}}</p>
+        <p class="comment-user  text-start" >{{user.username}}:</p>
+        <p class="comment-content  text-center" >{{comment_text}}</p>
       </li>
     </ul>
   {{/each}}
+  </div>
     
