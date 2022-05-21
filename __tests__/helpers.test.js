@@ -26,8 +26,12 @@ test('format_date() returns a date string', () => {
 
 test('format_time() returns a time string', () => {
   const time = format_time('09:22:000');
-  const time2 = format_time('12:51:000');
+  const time2 = format_time('12:00:000');
+  const time3 = format_time('17:55:000');
+  const time4 = format_time('16:00:000');
 
   expect(time).toBe('9:22 AM');
-  expect(time2).toBe('12:51 PM');
+  expect(time2).toBe('12 PM');
+  expect(time3).toBe('5:55 PM');
+  expect(time4).toBe('4 PM');
 });
