@@ -10,7 +10,7 @@
     {{#if event_url}}
     <div class="more-info row">
       <p class="title col-6 text-center">More Info:</p>
-      <p class="content col-6"><a href={{event_url}} target="_blank">{{event_name}}</a></p>
+      <p class="content col-6"><a href={{format_url event_url}} target="_blank">{{format_short_url event_url}}</a></p>
     </div>
     {{/if}}
   </div>

@@ -112,6 +112,9 @@ Event.init(
     event_url: {
       type: DataTypes.STRING,
       allowNull: true,
+      validate: {
+        isURL: true
+      }
     },
     user_id: {
       type: DataTypes.INTEGER,

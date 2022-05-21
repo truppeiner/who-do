@@ -5,7 +5,8 @@ module.exports = {
         date
       ).getFullYear()}`;
     },
-    format_url: url => {
+
+    format_short_url: url => {
       return url
         .replace('http://', '')
         .replace('https://', '')
@@ -13,14 +14,19 @@ module.exports = {
         .split('/')[0]
         .split('?')[0];
     },
-    format_url: url => {
-      return url
-        .replace('http://', '')
-        .replace('https://', '')
-        .replace('www.', '')
+
+    format_url: function formatUrl(url){
+      var httpString = 'http://'
+          , httpsString = 'https://'
+          ;
+  
+      if (url.substr(0, httpString.length) !== httpString && url.substr(0, httpsString.length) !== httpsString)
+          url = httpString + url;
+  
+      return url;
     },
 
-
+   
     format_plural: (word, amount) => {
       if (amount !== 1) {
         return `${word}s`;
