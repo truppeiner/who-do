@@ -1,6 +1,5 @@
 <link href="/stylesheets/singlePostStyles.css" rel="stylesheet">
 
-
 <div class="event-info container-fluid text-center pt-3">
   <div class="text-center container fluid">
     <p class="date">{{format_date event.event_date}}</p>
@@ -47,7 +46,7 @@
     <p class="location-text">Starts: {{format_time event.event_start_time}}</p>
     <p class="location-text">Ends: {{format_time event.event_end_time}}</p>
     <p class="location-text">{{event.event_location}}</p>
-    <iframe class="justify-content-center" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27550.02226964026!2d-97.730598!3d30.329548950000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1652575859718!5m2!1sen!2sus" width="75%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe width="350" height="350" style="border:0" loading="lazy" allowfullscreen="false" src="https://www.google.com/maps/embed/v1/search?q={{event.event_location}}&key=AIzaSyDBchWEfl7h3Wt3cUfe4oQzIlxr1jmjPGY"></iframe>
     <div class="attending ">
       <p>Interested: {{event.rsvp_interested_count}}</p>
       <p>Going: {{event.rsvp_yes_count}}</p>
