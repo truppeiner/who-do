@@ -30,7 +30,7 @@ async function newFormHandler(event) {
       document.location.replace('/');
     } else {
       //alert(response.statusText);
-      alert('Please enter all required information including a date and start time. If entering an event link be sure to enter a URL.');
+      alert('Please enter all required information including DATE and START TIME. If entering an event link be sure to enter a URL.');
     }
   }
   
