@@ -21,11 +21,16 @@ module.exports = {
       return word;
     },
     format_time: time => {
-      const parsedTime = parseFloat(time.replaceAll(':', '.'));
-      const formattedTime = parsedTime.toString();
-      if (parsedTime >= 11.59) {
-        return `${formattedTime.replace('.', ':')} PM`;
+      let formattedTime = new Date(`May 20, 2022 ${time}`);
+
+      const options = {
+        hour12: true,
+        formatMatcher: "basic"
       }
-        return `${formattedTime.replace('.', ':')} AM`;
+
+      formattedTime = formattedTime.toLocaleTimeString(options);
+      formattedTime = formattedTime.replace(':00', '');
+
+      return formattedTime;
     }
   };
